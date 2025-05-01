@@ -4,7 +4,7 @@ icon: fas fa-info-circle
 order: 5
 ---
 
-# Russ Swift: Building Tools for Rapid Development
+# Building Tools for Rapid Development
 
 Welcome to 0xsalt — building tools for rapid, high-signal development in a distributed world.
 
