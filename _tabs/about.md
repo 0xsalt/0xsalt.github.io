@@ -1,8 +1,17 @@
 ---
 # the default layout is 'page'
 icon: fas fa-info-circle
-order: 4
+order: 3
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+# 0xsalt: Building Tools for Rapid Development
+
+Welcome to 0xsalt — building tools for rapid, high-signal development in a distributed world.
+
+Explore:
+- Live telemetry processing
+- Feedback-driven intelligent development
+- Sovereign, decentralized infrastructure
+
+Stay tuned — more projects and blog posts coming soon.
+
