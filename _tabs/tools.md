@@ -1,7 +1,7 @@
 ---
 title: Tools
 icon: fas fa-tools
-order: 4
+order: 2
 ---
 
 This section documents enhancements to the project that involve capabilities extending beyond the visible scope of local environment.
