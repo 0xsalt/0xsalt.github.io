@@ -1,0 +1,33 @@
+./
+├── assets
+│   ├── img
+│   │   └── avatar
+│   │       └── profilepic.jpeg
+│   └── lib
+├── _config.yml
+├── _data
+│   ├── contact.yml
+│   └── share.yml
+├── filesystem_structure.txt
+├── Gemfile
+├── _includes
+│   ├── footer.html
+│   └── sidebar.html
+├── index.html
+├── LICENSE
+├── _plugins
+│   └── posts-lastmod-hook.rb
+├── _posts
+│   └── 2025-04-25-welcome-to-0xsalt.md
+├── README.md
+├── _tabs
+│   ├── about.md
+│   ├── archives.md
+│   ├── categories.md
+│   ├── tags.md
+│   └── tools.md
+└── tools
+    ├── run.sh
+    └── test.sh
+
+11 directories, 20 files

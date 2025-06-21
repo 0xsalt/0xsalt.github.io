@@ -1,8 +1,8 @@
 ---
 title: "Welcome to 0xsalt"
 date: 2025-04-25 12:00:00 +0000
-categories: [launch]
-tags: [chirpy, welcome, signal]
+categories: [info]
+tags: [welcome, signal]
 ---
 
 # Welcome
