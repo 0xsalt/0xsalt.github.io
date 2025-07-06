@@ -6,7 +6,10 @@ tags: [AI, MLOps]
 ---
 
 **I didn't realize that to train AI to write more like me, I had to write more, like me.**  
-That wasn’t my plan. My plan was to train a model on my writing, let it carry more of the blog post writing load and spit out quality content faster in my voice. My intuition on how AI trains on language, however, was incorrect. Somewhere between the export scripts, markdown filters, and labeled conversation histories, I ended up writing, not less. The irony is not lost on me.
+
+That wasn’t my plan. My plan was to train a model on my writing, let it carry more of the blog post writing load and spit out quality content faster in my voice. My intuition on how AI trains on language, however, was incorrect. Somewhere between the export scripts, markdown filters, and labeled conversation histories, I ended up writing more, not less. 
+
+The irony is not lost on me.
 
 **The Original Problem**: Teach an AI to write in my voice so I can write less, increase my productivity, share more in higher quality at greater speed. Going for the fast, good, AND cheap mythical triad. I'll have this solved in a hot minute, I resolved. 
 - Export all of my ChatGPT chats going back 6 months: Check!
