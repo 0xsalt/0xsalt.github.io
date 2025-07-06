@@ -14,7 +14,7 @@ The irony is not lost on me.
 **The Original Problem**: Teach an AI to write in my voice so I can write less, increase my productivity, share more in higher quality at greater speed. Going for the fast, good, AND cheap mythical triad. I'll have this solved in a hot minute, I resolved. 
 - Export all of my ChatGPT chats going back 6 months: Check!
 - Review chats: Check! 
-- I saw my progression from using generic plain chats to focused Project chats to specialized Custom GPT chats over time. I saw when I organized my brain around topics and projects I saw themes developing. Wonderful. 
+- Watching my progression from using generic plain chats to focused Project chats to specialized Custom GPT chats over time. When I organized my brain around topics and projects I saw themes developing. Wonderful. 
   Now how do I parse this ... 
 
 **The Tooling I Built**
