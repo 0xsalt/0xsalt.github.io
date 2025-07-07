@@ -17,7 +17,8 @@ The irony is not lost on me.
 - Watching my progression from using generic plain chats to focused Project chats to specialized Custom GPT chats over time. When I organized my brain around topics and projects I saw themes developing. Wonderful. 
   Now how do I parse this ... 
 
-- I wrote the first feature for `extract_gpt_conversations.py` script to export based on those items: Plain, Project, GPT. Script: `extract_gpt_conversations.py` [Github: extract_gpt_conversations.py](https://github.com/0xsalt/chatgpt_conversation_extractor/){:target="_blank"}{:rel="noopener"}
+- I wrote the first feature for `extract_gpt_conversations.py` script to export based on those items: Plain, Project, GPT. 
+- Script: `extract_gpt_conversations.py` [Github: extract_gpt_conversations.py](https://github.com/0xsalt/chatgpt_conversation_extractor/){:target="_blank"}{:rel="noopener"}
 
 ```
 ./extract_gpt_conversations.py conversations.json
@@ -47,14 +48,17 @@ Enter choice:
 ```
 
 - Now I uploaded it to OpenAI's API to train a model on this treasure trove of "my voice."
-- It accepted a file in JSONL format, a slimmer more compressed version of the JSON file I had available to me. So I wrote the converter for that. Script: `generate_finetune_jsonl.py` [Github: chatgpt_generate_finetune_jsonl.py](https://github.com/0xsalt/chatgpt_generate_finetune_jsonl/){:target="_blank"}{:rel="noopener"}
+- It accepted a file in JSONL format, a slimmer more compressed version of the JSON file I had available to me. So I wrote the converter for that. 
+- Script: `generate_finetune_jsonl.py` [Github: chatgpt_generate_finetune_jsonl.py](https://github.com/0xsalt/chatgpt_generate_finetune_jsonl/){:target="_blank"}{:rel="noopener"}
 
-- Chat content still had too much noise in it so I wrote a script to exclude chats that start with obvious questions indicating lower quality "voice" excerpts. I filtered these out by excluding chats that start with "how," "what," "when," "where," "why," "can," etc. Script: `filter_blog_style.py` [Github: filter_blog_style.py](https://github.com/0xsalt/chatgpt_generate_finetune_jsonl/){:target="_blank"}{:rel="noopener"}
+- Chat content still had too much noise in it so I wrote a script to exclude chats that start with obvious questions indicating lower quality "voice" excerpts. I filtered these out by excluding chats that start with "how," "what," "when," "where," "why," "can," etc. 
+- Script: `filter_blog_style.py` [Github: filter_blog_style.py](https://github.com/0xsalt/chatgpt_generate_finetune_jsonl/){:target="_blank"}{:rel="noopener"}
 
 - Now before I submitted my refined data to train my new custom GPT, I wanted to estimate how much this would cost me. Using Python `tiktoken` library and the current published costs for training GPT-3.5 models
     - price_train_per_1k = 0.012  # Training cost per 1K tokens
     - price_infer_per_1k = 0.008  # Inference cost per 1K tokens
-I got to within ~5% variance of the actual cost, around $8 and change. I suspect the difference is most likely internal OpenAI processing steps. Script: `estimate_finetune_cost.py` [Github: estimate_finetune_cost.py](https://github.com/0xsalt/chatgpt_generate_finetune_jsonl/){:target="_blank"}{:rel="noopener"}
+I got to within ~5% variance of the actual cost, around $8 and change. I suspect the difference is most likely internal OpenAI processing steps. 
+- Script: `estimate_finetune_cost.py` [Github: estimate_finetune_cost.py](https://github.com/0xsalt/chatgpt_generate_finetune_jsonl/){:target="_blank"}{:rel="noopener"}
 
 Now that I had a data cleanup pipeline in place I could move on to actual model training and use. I worked through semi-automating the file upload and model training job start with OpenAI's API. 
 
@@ -72,7 +76,8 @@ openai api models.list
 ```
 - I chose gpt-3.5 for low cost.
 
-List your existing uploaded files. Script: `openai_manage_files.py` [Github: openai_manage_files.py](https://github.com/0xsalt/chatgpt_generate_finetune_jsonl/){:target="_blank"}{:rel="noopener"}
+List your existing uploaded files. 
+- Script: `openai_manage_files.py` [Github: openai_manage_files.py](https://github.com/0xsalt/chatgpt_generate_finetune_jsonl/){:target="_blank"}{:rel="noopener"}
 ```
 ./openai_manage_files.py --list
 Fetching files from OpenAI API...
