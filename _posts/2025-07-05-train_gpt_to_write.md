@@ -118,7 +118,7 @@ You could say I attempted to train a model using RL and HF and, in this case, I 
 
 I regularly see that as much as we are tuning and training models, we are also learning how best to interact with them. Many times the most difficult part of automation is explaining our own logic and intentions out loud. Assumptions are discovered quickly when a model does *exactly* what you asked it to and you discover your request had logic flaws. 
 
-It turns out I'm not alone in noticing this shift. A piece in [Ars Technica](https://arstechnica.com/ai/2025/07/how-a-big-shift-in-training-llms-led-to-a-capability-explosion/) published July 7, 2025 highlights how RLHF feedback loops significantly improve model training. Only giving the models all of the right answers isn't enough, it also needs to train on the actions taken to get from various incorrect examples to the desired state. 
+It turns out I'm not alone in noticing this shift. A piece in <a href="https://arstechnica.com/ai/2025/07/how-a-big-shift-in-training-llms-led-to-a-capability-explosion/" target="_blank" rel="noopener">Ars Technica</a> published July 7, 2025 highlights how RLHF feedback loops significantly improve model training. Only giving the models all of the right answers isn't enough, it also needs to train on the actions taken to get from various incorrect examples to the desired state. 
 
 **Next Steps: From Imitation to Actual RLHF Feedback Loops**
 My upcoming research will focus on providing the model with more examples of before and after writing, and then implementing a proper RLHF-style feedback loop: have it generate two responses, I select the better output most aligned with my goals, and use that as input training examples to its next iteration.
