@@ -17,9 +17,8 @@ The irony is not lost on me.
 - Watching my progression from using generic plain chats to focused Project chats to specialized Custom GPT chats over time. When I organized my brain around topics and projects I saw themes developing. Wonderful. 
   Now how do I parse this ... 
 
-**The Tooling I Built**
-- I wrote the first feature for `extract_gpt_conversations.py` script to export based on those items: Plain, Project, GPT
-https://github.com/0xsalt/chatgpt_conversation_extractor
+- I wrote the first feature for `extract_gpt_conversations.py` script to export based on those items: Plain, Project, GPT. Script: `extract_gpt_conversations.py`
+[Github: extract_gpt_conversations.py](https://github.com/0xsalt/chatgpt_conversation_extractor/)
 
 ```
 ./extract_gpt_conversations.py conversations.json
@@ -49,18 +48,17 @@ Enter choice:
 ```
 
 - Now I uploaded it to OpenAI's API to train a model on this treasure trove of "my voice."
-- It accepted a file in JSONL format, a slimmer more compressed version of the JSON file I had available to me. So I wrote the converter for that. 
-https://github.com/0xsalt/chatgpt_generate_finetune_jsonl/
-	- generate_finetune_jsonl.py
+- It accepted a file in JSONL format, a slimmer more compressed version of the JSON file I had available to me. So I wrote the converter for that. Script: `generate_finetune_jsonl.py`
+	- [Github: chatgpt_generate_finetune_jsonl.py](https://github.com/0xsalt/chatgpt_generate_finetune_jsonl/)
 
-- Chat content still had too much noise in it so I wrote a script to exclude chats that start with obvious questions indicating lower quality "voice" excerpts. I filtered these out by excluding chats that start with "how," "what," "when," "where," "why," "can," etc..
-	- filter_blog_style.py
+- Chat content still had too much noise in it so I wrote a script to exclude chats that start with obvious questions indicating lower quality "voice" excerpts. I filtered these out by excluding chats that start with "how," "what," "when," "where," "why," "can," etc. Script: filter_blog_style.py
+	- [Github: filter_blog_style.py](https://github.com/0xsalt/chatgpt_generate_finetune_jsonl/)
 
-- Now before I submited my refined data to train my new custom GPT, I wanted to estimate how much this would cost me. Using Python `tiktoken` library and the current published costs for training GPT-3.5 models
+- Now before I submitted my refined data to train my new custom GPT, I wanted to estimate how much this would cost me. Using Python `tiktoken` library and the current published costs for training GPT-3.5 models
     - price_train_per_1k = 0.012  # Training cost per 1K tokens
     - price_infer_per_1k = 0.008  # Inference cost per 1K tokens
-I got to within ~5% variance of the actual cost, around $8 and change. I suspect the difference is most likely internal OpenAI processing steps. 
-	- estimate_finetune_cost.py
+I got to within ~5% variance of the actual cost, around $8 and change. I suspect the difference is most likely internal OpenAI processing steps. Script: `estimate_finetune_cost.py`
+	- [Github: estimate_finetune_cost.py](https://github.com/0xsalt/chatgpt_generate_finetune_jsonl/)
 
 Now that I had a data cleanup pipeline in place I could move on to actual model training and use. I worked through semi-automating the file upload and model training job start with OpenAI's API. 
 
@@ -78,7 +76,8 @@ openai api models.list
 ```
 - I chose gpt-3.5 for low cost.
 
-List your existing uploaded files
+List your existing uploaded files. Script: `openai_manage_files.py`
+	- [Github: openai_manage_files.py](https://github.com/0xsalt/chatgpt_generate_finetune_jsonl/)
 ```
 ./openai_manage_files.py --list
 Fetching files from OpenAI API...
@@ -118,6 +117,11 @@ This concept is used as a methodology to train a model to learn what humans pref
 You could say I attempted to train a model using RL and HF and, in this case, I wound up being the one getting trained. 
 
 I regularly see that as much as we are tuning and training models, we are also learning how best to interact with them. Many times the most difficult part of automation is explaining our own logic and intentions out loud. Assumptions are discovered quickly when a model does *exactly* what you asked it to and you discover your request had logic flaws. 
+
+It turns out I'm not alone in noticing this shift. A piece in [Ars Technica](https://arstechnica.com/ai/2025/07/how-a-big-shift-in-training-llms-led-to-a-capability-explosion/) published July 7, 2025 highlights how RLHF feedback loops significantly improve model training. Only giving the models all of the right answers isn't enough, it also needs to train on the actions taken to get from various incorrect examples to the desired state. 
+
+**Next Steps: From Imitation to Actual RLHF Feedback Loops**
+My upcoming research will focus on providing the model with more examples of before and after writing, and then implementing a proper RLHF-style feedback loop: have it generate two responses, I select the better output most aligned with my goals, and use that as input training examples to its next iteration.
 
 I chuckle at the supposed incongruity of writing more in order to write less, but it starts to make more sense when you realize the model needs to train on the diff of the conversion process, not just the end result. 
 
