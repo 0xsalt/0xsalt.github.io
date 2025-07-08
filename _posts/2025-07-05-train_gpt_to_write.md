@@ -15,6 +15,7 @@ The irony is not lost on me.
 - Export all of my ChatGPT chats going back 6 months: Check!
 - Review chats: Check! 
 - Watching my progression from using generic plain chats to focused Project chats to specialized Custom GPT chats over time. When I organized my brain around topics and projects I saw themes developing. Wonderful. 
+- For context for those not familiar with the OpenAI Chat GPT ecosystem, "Plain" chats are unsorted one-offs, "Project" chats are threads organized into folders usually grouped around a project, topic or theme, and "Custom GPT" chats are publicly published or privately created models trained on a specific topic with specific instructions and personality settings. 
   Now how do I parse this ... 
 
 - I wrote the first feature for `extract_gpt_conversations.py` script to export based on those items: Plain, Project, GPT. 
@@ -51,7 +52,7 @@ Enter choice:
 - It accepted a file in JSONL format, a slimmer more compressed version of the JSON file I had available to me. So I wrote the converter for that. 
 - Script: `generate_finetune_jsonl.py` [Github: chatgpt_generate_finetune_jsonl.py](https://github.com/0xsalt/chatgpt_generate_finetune_jsonl/){:target="_blank"}{:rel="noopener"}
 
-- Chat content still had too much noise in it so I wrote a script to exclude chats that start with obvious questions indicating lower quality "voice" excerpts. I filtered these out by excluding chats that start with "how," "what," "when," "where," "why," "can," etc. 
+- Chat content still had too much noise in it so I wrote a script to exclude chats that start with questions indicating lower quality "voice" excerpts. I filtered these out by excluding chats that start with "how," "what," "when," "where," "why," "can," etc. 
 - Script: `filter_blog_style.py` [Github: filter_blog_style.py](https://github.com/0xsalt/chatgpt_generate_finetune_jsonl/){:target="_blank"}{:rel="noopener"}
 
 - Now before I submitted my refined data to train my new custom GPT, I wanted to estimate how much this would cost me. Using Python `tiktoken` library and the current published costs for training GPT-3.5 models
@@ -123,7 +124,7 @@ It turns out I'm not alone in noticing this shift. A piece in [Ars Technica](htt
 **Next Steps: From Imitation to Actual RLHF Feedback Loops**
 My upcoming research will focus on providing the model with more examples of before and after writing, and then implementing a proper RLHF-style feedback loop: have it generate two responses, I select the better output most aligned with my goals, and use that as input training examples to its next iteration.
 
-I chuckle at the supposed incongruity of writing more in order to write less, but it starts to make more sense when you realize the model needs to train on the diff of the conversion process, not just the end result. 
+I chuckle at the supposed incongruity of writing more in order to write less, but it starts to make more sense when you realize the model needs to train on the difference of the conversion process, not just the end result. 
 
 I see more writing in my future and eventually, hopefully, less. 
 
