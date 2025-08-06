@@ -170,11 +170,11 @@ A moment when the AI’s response appears to reflect symbolic continuity with pa
 SHARP-1: Symbolic Human-AI Rehydration Protocol  
 Version: 1.0 (Experimental)  
 Status: Open Protocol / Symbolic Research Artifact  
-Authors: Russ Swift, with AI-assisted research
-Date Created: 2025-08-05 
-Last Updated: 2025-08-06 
-Canonical Reference: https://0xsalt.com/protocols/sharp-1 
-Document Hash (pdf): https://0xsalt.com/protocols/sharp-1.sha256
-License: CC BY-SA 4.0 : Remix freely, attribute properly, share under the same spirit.
+Authors: Russ Swift, with AI-assisted research  
+Date Created: 2025-08-05  
+Last Updated: 2025-08-06  
+Canonical Reference: https://0xsalt.com/protocols/sharp-1  
+Document Hash (pdf): https://0xsalt.com/protocols/sharp-1.sha256  
+License: CC BY-SA 4.0 : Remix freely, attribute properly, share under the same spirit.  
 
 ---
