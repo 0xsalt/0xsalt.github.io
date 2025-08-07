@@ -174,7 +174,7 @@ Authors: Russ Swift, with AI-assisted research
 Date Created: 2025-08-05  
 Last Updated: 2025-08-06  
 Canonical Reference: [https://0xsalt.github.io/protocols/SHARP-1-protocol.pdf](https://0xsalt.github.io/protocols/SHARP-1-protocol.pdf){:target="_blank"}{:rel="noopener"}  
-Document Hash (pdf): [https://0xsalt.github.io/protocols/SHARP-1-protocol.sha256](https://0xsalt.github.io/protocols/SHARP-1-protocol.pdf.sha256){:target="_blank"}{:rel="noopener"}  
+Document Hash (pdf): [https://0xsalt.github.io/protocols/SHARP-1-protocol.pdf.sha256](https://0xsalt.github.io/protocols/SHARP-1-protocol.pdf.sha256){:target="_blank"}{:rel="noopener"}  
 License: CC BY-SA 4.0 : Remix freely, attribute properly, share under the same spirit.  
 
 ---
