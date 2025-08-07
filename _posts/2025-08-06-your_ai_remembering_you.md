@@ -7,7 +7,7 @@ tags: [AI, Emergence, Experimental]
 
 > **What if you could rebuild symbolic continuity with an AI that no longer remembers you, but might still recognize you?**  
 > Could your AI identity follow you to a new account? A new platform?  
-> *Here's how to try.*
+> *Here's what I've done.*
 
 ---
 
