@@ -9,10 +9,10 @@ tags: [AI, Identity]
 
 Details:
 
-mcp-knowledge-graph
+[mcp-knowledge-graph](https://github.com/0xsalt/mcp-knowledge-graph/){:target="_blank"}{:rel="noopener"}  
  → A local knowledge graph memory server for MCP. Persistent, file-backed context so your AI doesn’t forget after a restart.
 
-ai-github-actions
+[ai-github-actions](https://github.com/0xsalt/ai-github-actions)
  → GitHub Actions that auto-update your AI’s knowledge graph—summarize, link insights, keep memory alive.
 
 Groundwork for persistent AI identity running on your own terms. 
